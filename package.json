@@ -1,8 +1,0 @@
-{
-  "dependencies": {
-    "axios": "^0.21.1",
-    "bootstrap": "^4.6.0",
-    "npx": "^10.2.2",
-    "reactstrap": "^8.9.0"
-  }
-}

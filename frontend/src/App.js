@@ -1,16 +1,10 @@
-import { Container } from 'reactstrap';
 import './App.css';
-import BlogComponent from './components/Blog/BlogComponent';
-import HeaderComponent from './components/Header/HeaderComponent';
+import HomeComponent from './component/Home/HomeComponent';
 
 function App() {
-
   return (
-    <div className="App">
-      <HeaderComponent></HeaderComponent>
-      <section class="section">
-        <BlogComponent></BlogComponent>
-      </section>
+    <div className="App mx-auto bg-gray-900 p-10">
+      <HomeComponent></HomeComponent>
     </div>
   );
 }
