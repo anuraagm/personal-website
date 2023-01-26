@@ -1,8 +1,12 @@
 from rest_framework import serializers
-from .models import Blog
+from .models import Post, Page
 
-
-class BlogSerializer(serializers.ModelSerializer):
+class PostSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Blog
+        model = Post
         fields = ('id', 'title', 'content')
+
+class PageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Page
+        fields = ('id', 'page_name', 'page_title', 'page_content')
