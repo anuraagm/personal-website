@@ -15,3 +15,29 @@ class Page(models.Model):
 
     def __str__(self):
         return self.page_name
+
+class Project(models.Model):
+    project_name = models.CharField(max_length=255)
+    project_description = models.TextField()
+    project_details = models.TextField()
+    project_link = models.CharField(max_length=255, default="", blank=True, null=True) 
+
+    def __str__(self):
+        return self.project_name
+
+class Technology(models.Model):
+    technology_name = models.CharField(max_length=255)
+    
+    def __str__(self):
+        return self.technology_name
+
+class Work(models.Model):
+    company_name = models.CharField(max_length=255)
+    role = models.CharField(max_length=255)
+    role_details = models.TextField()
+    start_date = models.DateField(default="", blank=True, null=True)
+    end_date = models.DateField(default="", blank=True, null=True)
+    company_link = models.CharField(max_length=255, default="", blank=True, null=True)
+
+    def __str__(self):
+        return self.company_name
