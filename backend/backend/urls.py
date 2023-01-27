@@ -24,6 +24,9 @@ from website import views
 router = routers.DefaultRouter()
 router.register(r'posts', views.PostView, 'post')
 router.register(r'pages', views.PageView, 'page')
+router.register(r'projects', views.ProjectView, 'project')
+router.register(r'technology', views.TechnologyView, 'technology')
+router.register(r'work', views.WorkView, 'work')
 
 urlpatterns = [
     path('admin/', admin.site.urls),

@@ -3,7 +3,7 @@ import HomeComponent from './component/Home/HomeComponent';
 
 function App() {
   return (
-    <div className="App mx-auto bg-gray-900 p-10">
+    <div className="App mx-auto bg-gray-900 md:p-12">
       <HomeComponent></HomeComponent>
     </div>
   );
