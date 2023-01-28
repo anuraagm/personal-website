@@ -1,6 +1,7 @@
 import IntroComponent from "../Intro/IntroComponent";
 import WorkComponent from "../Work/WorkComponent";
 import LinkComponent from "../../common/Link/LinkComponent";
+import FooterComponent from "../Footer/FooterComponent";
 
 function HomeComponent () {
     return (
@@ -10,6 +11,9 @@ function HomeComponent () {
                     <IntroComponent></IntroComponent>
                     <div className="hidden lg:block">
                         <LinkComponent></LinkComponent>
+                    </div>
+                    <div className="mt-10 invisible lg:visible">
+                        <FooterComponent></FooterComponent>
                     </div>
                 </div>
             </div>
