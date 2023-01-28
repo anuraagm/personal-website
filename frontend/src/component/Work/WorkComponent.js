@@ -32,7 +32,7 @@ function WorkComponent () {
                 {work !== null ? (
                         work.map(element => 
                             <div className='mb-6'>
-                                <a href="#" class="block p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                                <a href="#" class="block p-6 bg-white border border-gray-200 rounded-sm shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{element.company_name}</h5>
                                     <p class="font-normal text-gray-700 dark:text-gray-400">{element.role_details}</p>
                                 </a>
@@ -48,7 +48,7 @@ function WorkComponent () {
                 {project !== null ? (
                         project.map(element => 
                             <div className='mb-6'>
-                                <a href="#" class="block p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                                <a href="#" class="block p-6 bg-white border border-gray-200 rounded-sm shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{element.project_name}</h5>
                                     <p class="font-normal text-gray-700 dark:text-gray-400">{element.project_description}</p>
                                 </a>
