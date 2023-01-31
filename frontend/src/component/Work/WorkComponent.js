@@ -1,5 +1,6 @@
 import {useState, useEffect, useRef, scrollIntoView} from 'react';
 import axios from 'axios';
+import SkillComponent from '../Skill/SkillComponent';
 
 function WorkComponent ({workRef, projectRef, place}) {
 
@@ -8,7 +9,6 @@ function WorkComponent ({workRef, projectRef, place}) {
 
     useEffect(() => {
         console.log("changed : ",place);
-        // handleScroll(place.current);
     },[place]);
 
     useEffect(() => {
@@ -64,6 +64,12 @@ function WorkComponent ({workRef, projectRef, place}) {
                         :
                         <h1>No Project Data Retrieved</h1>
                     }
+                </div>
+            </div>
+            <div className='Skills lg:pt-12' id="projects">
+                <div>
+                    <h2 class="text-2xl font-bold text-gray-100 mb-6">Skills</h2>
+                    <SkillComponent></SkillComponent>
                 </div>
             </div>
         </div>

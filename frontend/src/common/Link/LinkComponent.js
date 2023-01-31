@@ -8,8 +8,8 @@ function LinkComponent({workRef, projectRef, setPlace}) {
                 <ul>
                     <li><a href="#work" ><h5 class="text-5lg font-bold text-gray-100 mb-6">WORK EXPERIENCE</h5></a></li>
                     <li><a href="#projects"><h5 class="text-5lg font-bold text-gray-100 mb-6">PROJECTS</h5></a></li>
+                    <li><a href="#skills"><h5 class="text-5lg font-bold text-gray-100 mb-6">SKILLS</h5></a></li>
                     <li><a href="#"><h5 class="text-5lg font-bold text-gray-100 mb-6">BLOGS</h5></a></li>
-                    <li><a href="#"><h5 class="text-5lg font-bold text-gray-100 mb-6">SKILLS</h5></a></li>
                     <li><a href="#"><h5 class="text-5lg font-bold text-gray-100 mb-6">CONTACT</h5></a></li>
                 </ul>
             </div>
