@@ -13,9 +13,9 @@ const ContactComponent = () => {
   };
 
   return (
-    <div className="ContactComponent dark:bg-zinc-800 p-6 rounded-lg shadow-md mb-12">
+    <div className="ContactComponent dark:bg-zinc-800 p-6 rounded-lg shadow-md">
       <form onSubmit={handleSubmit}>
-        <h5 class="text-2xl font-bold text-gray-300 mb-6">Drop in a message and I'll get in touch with you as soon as possible.</h5>
+        <h5 className="text-2xl font-bold text-gray-300 mb-6">Drop in a message and I'll get in touch with you as soon as possible.</h5>
         <div className="mb-4">
           <label
             className="block text-gray-200 font-medium mb-2"

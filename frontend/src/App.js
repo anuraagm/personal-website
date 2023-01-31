@@ -6,11 +6,11 @@ import HomeComponent from './component/Home/HomeComponent';
 function App() {
   return (
     <div className="App mx-auto">
-      <div className='visible lg:invisible md:p-0 pt-4 pl-4'>
+      <div className='visible lg:invisible md:p-0 pt-4 pl-4 sticky top-0 bg-zinc-900'>
         <HeaderComponent></HeaderComponent>
       </div>
       <HomeComponent></HomeComponent>
-      <div className='block lg:hidden md:p-0 pt-4 ml-12'>
+      <div className='block lg:hidden md:p-0 ml-12'>
         <FooterComponent></FooterComponent>
       </div>
     </div>
