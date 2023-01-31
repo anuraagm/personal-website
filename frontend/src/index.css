@@ -9,6 +9,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background:#18181b;
+  scroll-behavior: smooth;
 }
 
 code {
@@ -18,4 +20,5 @@ code {
 
 html {
   @apply font-body;
+  scroll-behavior: smooth;
 }
