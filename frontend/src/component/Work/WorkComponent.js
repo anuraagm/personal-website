@@ -67,13 +67,13 @@ function WorkComponent ({workRef, projectRef, place}) {
                     }
                 </div>
             </div>
-            <div className='Skills lg:pt-12 mb-12'>
+            <div className='Skills lg:pt-12 mb-12' id="skills">
                 <div>
                     <h2 class="text-2xl font-bold text-gray-100 mb-6">Skills</h2>
                     <SkillComponent></SkillComponent>
                 </div>
             </div>
-            <div className='Contact lg:pt-12 mb-12'>
+            <div className='Contact lg:pt-12 mb-12' id="contact">
                 <div>
                     <h2 class="text-2xl font-bold text-gray-100 mb-6">Contact</h2>
                     <ContactComponent></ContactComponent>

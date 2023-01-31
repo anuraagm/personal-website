@@ -18,7 +18,7 @@ function SkillComponent() {
     },[]);
 
     return (
-        <div className="Skills" id="skills">
+        <div className="Skills">
             {skills ? 
                 (
                     <div className="flex flex-wrap">

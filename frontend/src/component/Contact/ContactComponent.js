@@ -13,14 +13,15 @@ const ContactComponent = () => {
   };
 
   return (
-    <div className="ContactComponent dark:bg-zinc-800 p-6 rounded-lg shadow-md mb-12" id="contact">
+    <div className="ContactComponent dark:bg-zinc-800 p-6 rounded-lg shadow-md mb-12">
       <form onSubmit={handleSubmit}>
+        <h5 class="text-2xl font-bold text-gray-300 mb-6">Drop in a message and I'll get in touch with you as soon as possible.</h5>
         <div className="mb-4">
           <label
             className="block text-gray-200 font-medium mb-2"
             htmlFor="name"
           >
-            Name
+            Your Name
           </label>
           <input
             className="w-full border border-zinc-600 text-gray-200 bg-zinc-700 p-2"
@@ -35,7 +36,7 @@ const ContactComponent = () => {
             className="block text-gray-200 font-medium mb-2"
             htmlFor="email"
           >
-            Email
+            Your Email
           </label>
           <input
             className="w-full border border-zinc-600 text-gray-200 bg-zinc-700 p-2"
@@ -50,7 +51,7 @@ const ContactComponent = () => {
             className="block text-gray-200 font-medium mb-2"
             htmlFor="message"
           >
-            Message
+            Your Message
           </label>
           <textarea
             className="w-full border border-zinc-600 text-gray-200 bg-zinc-700 p-2"
