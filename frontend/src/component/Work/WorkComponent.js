@@ -1,14 +1,21 @@
-import {useState, useEffect, useRef, scrollIntoView} from 'react';
+import {useState, useEffect} from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import SkillComponent from '../Skill/SkillComponent';
+import ContactComponent from '../Contact/ContactComponent';
+import ProjectModal from '../../common/Modal/ProjectModal';
 
 function WorkComponent ({workRef, projectRef, place}) {
 
     const [work, setWork] = useState(null);
     const [project, setProjects] = useState(null);
+    const [openModal, setOpenModal] = useState(false);
+    const [currentData, setCurrentData] = useState();
+
+    let navigate = useNavigate();
 
     useEffect(() => {
         console.log("changed : ",place);
-        // handleScroll(place.current);
     },[place]);
 
     useEffect(() => {
@@ -29,6 +36,18 @@ function WorkComponent ({workRef, projectRef, place}) {
             console.log(err);
         })
     },[]);
+
+    const routeProject = ({id}) => {
+        console.log('id : ',id);
+        let path = `/projects/${id}`;
+        navigate(path);
+    }
+
+    const manageModal = (elem) =>{
+        console.log(elem.id);
+        setOpenModal(true);
+        setCurrentData(elem);
+    }
 
     return (
         <div className="Work overflow:scroll">
@@ -53,17 +72,32 @@ function WorkComponent ({workRef, projectRef, place}) {
                     <h2 class="text-2xl font-bold text-gray-100 mb-6">Projects</h2>
                     {project !== null ? (
                             project.map(element => 
-                                <div className='mb-6'>
-                                    <a href="#" class="block p-6 bg-white border border-zinc-200 rounded-sm shadow hover:bg-zinc-100 dark:bg-zinc-800 dark:border-zinc-700 dark:hover:bg-zinc-700">
+                                <div className='mb-6' id={element.id} onClick={() => manageModal(element)}>
+                                    <div class="block p-6 bg-white border border-zinc-200 rounded-sm shadow hover:bg-zinc-100 dark:bg-zinc-800 dark:border-zinc-700 dark:hover:bg-zinc-700" id="toggle-card">
                                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-100">{element.project_name}</h5>
                                         <p class="font-normal text-gray-700 dark:text-gray-400">{element.project_description}</p>
-                                    </a>
-                                </div> 
+                                    </div>
+                                </div>
                             )
                         )
                         :
                         <h1>No Project Data Retrieved</h1>
                     }
+                    <div>
+                        <ProjectModal openModal={openModal} setOpenModal={setOpenModal} data={currentData}></ProjectModal>
+                    </div>
+                </div>
+            </div>
+            <div className='Skills lg:pt-12 mb-12' id="skills">
+                <div>
+                    <h2 class="text-2xl font-bold text-gray-100 mb-6">Skills</h2>
+                    <SkillComponent></SkillComponent>
+                </div>
+            </div>
+            <div className='Contact lg:pt-12 mb-12' id="contact">
+                <div>
+                    <h2 class="text-2xl font-bold text-gray-100 mb-6">Contact</h2>
+                    <ContactComponent></ContactComponent>
                 </div>
             </div>
         </div>
