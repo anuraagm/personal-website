@@ -4,12 +4,18 @@ import LinkComponent from "../../common/Link/LinkComponent";
 import FooterComponent from "../Footer/FooterComponent";
 import { useEffect, useRef, useState } from "react";
 import link from "./link.png";
+import { useNavigate } from 'react-router-dom';
 
 function HomeComponent () {
 
     const workRef = useRef();
     const projectRef = useRef();
     const [place, setPlace] = useState(workRef);
+    const navigate = useNavigate();
+    
+    const handleClick = () => {
+        navigate("/blogs");
+    }
 
     return (
         <div className="Home lg:h-screen flex mx-auto grid lg:grid-cols-7 md:grid-cols-1">
@@ -23,7 +29,7 @@ function HomeComponent () {
                         <FooterComponent></FooterComponent>
                     </div>
                     <div className="block md:hidden mt-6">
-                        <a href="#">
+                        <a href="#" onClick={handleClick}>
                             <div className="flex items-center">
                                 <img className="mt-2 mr-1" src={link} style={{width:"3%"}}/>
                                 <p className='text-xs text-gray-200 mt-2'>Checkout my Blog</p>
