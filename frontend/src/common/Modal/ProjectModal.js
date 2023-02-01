@@ -31,7 +31,7 @@ function ProjectModal({openModal, setOpenModal, data}) {
               </div>
               {data.project_link !== "\"\"" &&
                 <div className="mt-6">
-                    <p className="text-sm leading-5 text-gray-200">
+                    <p className="text-sm leading-5 text-gray-400">
                         <a href={data.project_link}>Project Link</a>
                     </p>
                 </div>
