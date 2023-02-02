@@ -5,9 +5,10 @@ import axios from "axios";
 function SkillComponent() {
 
     const [skills, setSkills] = useState();
+    const API_ENDPOINT = process.env.REACT_APP_API_ENDPOINT;
 
     useEffect(() => {
-        axios.get('/technology/')
+        axios.get(`${API_ENDPOINT}/technology/`)
         .then(res => {
             console.log("res data ",res.data);
             setSkills(res.data);

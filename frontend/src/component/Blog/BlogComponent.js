@@ -5,8 +5,10 @@ import FooterComponent from "../Footer/FooterComponent";
 
 function BlogComponent() {
 
+    const API_ENDPOINT = process.env.REACT_APP_API_ENDPOINT;
+
     useEffect(() => {
-        axios.get('/posts/')
+        axios.get(`${API_ENDPOINT}/posts/`)
         .then(posts => {
             console.log(posts.data);
         })

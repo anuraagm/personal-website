@@ -11,6 +11,7 @@ function WorkComponent ({workRef, projectRef, place}) {
     const [project, setProjects] = useState(null);
     const [openModal, setOpenModal] = useState(false);
     const [currentData, setCurrentData] = useState();
+    const API_ENDPOINT = process.env.REACT_APP_API_ENDPOINT;
 
     let navigate = useNavigate();
 
@@ -19,7 +20,7 @@ function WorkComponent ({workRef, projectRef, place}) {
     },[place]);
 
     useEffect(() => {
-        axios.get('/projects/')
+        axios.get(`${API_ENDPOINT}/projects/`)
         .then(projects => {
             console.log(projects.data);
             setProjects(projects.data);
@@ -27,7 +28,7 @@ function WorkComponent ({workRef, projectRef, place}) {
         .catch(err => {
             console.log(err);
         })
-        axios.get('/work/')
+        axios.get(`${API_ENDPOINT}/work/`)
         .then(work => {
             console.log(work.data);
             setWork(work.data);

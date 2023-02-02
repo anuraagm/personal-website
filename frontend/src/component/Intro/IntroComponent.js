@@ -2,10 +2,12 @@ import {useEffect, useState} from 'react';
 import axios from 'axios';
 
 function IntroComponent() {
+
+    const API_ENDPOINT = process.env.REACT_APP_API_ENDPOINT;
     
     const [pageData, setPageData] = useState(null);
     useEffect(() => {
-        axios.get('/pages/1/')
+        axios.get(`${API_ENDPOINT}/pages/1/`)
         .then(page => {
             console.log(page.data);
             setPageData(page.data);
