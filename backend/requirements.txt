@@ -1,0 +1,4 @@
+django
+django-summernote
+django-cors-headers
+djangorestframework
