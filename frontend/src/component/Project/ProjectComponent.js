@@ -6,9 +6,10 @@ import HtmlReactParser from 'html-react-parser';
 function ProjectComponent() {
 
     const [projectData, setProjectData] = useState();
+    const API_ENDPOINT = process.env.REACT_APP_API_ENDPOINT;
 
     useEffect(() => {
-        axios.get((window.location.pathname+"/"))
+        axios.get(API_ENDPOINT+(window.location.pathname+"/"))
         .then(posts => {
             console.log(posts.data);
             setProjectData(posts.data);
