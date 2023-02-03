@@ -11,7 +11,7 @@ function FooterComponent() {
                 <a href="https://drive.google.com/file/d/1CMMirHwfsEyLlJbZqW8px8cUzBBa6HSd/view?usp=share_link"><figure><img style={{marginLeft:10}} src={document}/><figcaption className="text-xxs text-gray-100">resume</figcaption></figure></a>
             </div>
             <div className="mt-6">
-                <p className="text-xxs text-gray-100">Designed by <a className="text-xxs text-gray-400 hover:text-gray-200" href="https://www.karankowshik.com/">Karan Kowshik</a></p>
+                <p className="text-xxs text-gray-100">Developed by <a className="text-xxs text-gray-400 hover:text-gray-200" href="#contact">Anuraag Muktevi</a></p>
             </div>
         </div>
     )

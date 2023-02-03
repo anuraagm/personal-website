@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import instagram from './instagram.png';
 import wordpress from './wordpress.png';
+import external from './external.png';
 
 const ContactComponent = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const contactEmail = process.env.REACT_APP_EMAIL;
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -17,29 +19,23 @@ const ContactComponent = () => {
   return (
     <div className="ContactComponent dark:bg-zinc-800 p-6 rounded-lg shadow-md">
       <h5 className="text-2xl font-bold text-gray-300 mb-6 md:w-2/3">Drop in a message and I'll get in touch with you as soon as possible.</h5>
-      <div className="mb-8">
-        <label
-          className="block font-bold text-gray-200"
-          htmlFor="name"
-        >
-          Name
-        </label>
-        <p className="w-full border text-gray-200 border-zinc-800">
-          Anuraag Muktevi
-        </p>
-      </div>
-      <div className="mb-8">
+      <div className="mb-12">
         <label
           className="block font-bold text-gray-200"
           htmlFor="email"
         >
-          Email
+          Email me 
         </label>
-        <p className="w-full border text-gray-200 border-zinc-800">
-          muktevianuraag@gmail.com
-        </p>
+        <a href="#contact" onClick={(e) => {window.location.href = `mailto:${contactEmail}?subject=SendMail&body=Description`; e.preventDefault();}}>
+          <div className="flex items-center">
+              <img className="mr-1" src={external} style={{width:"1.5%"}}/>
+              <p className="w-full border text-gray-200 border-zinc-800">
+                @AnuraagMuktevi
+              </p>
+          </div>
+        </a>
       </div>
-      <div className="mb-8">
+      <div className="mb-12">
         <label
           className="block text-gray-200 font-bold"
           htmlFor="message"
