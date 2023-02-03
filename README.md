@@ -2,7 +2,7 @@
 I have created this repository for the development of my personal website.
 
 ## To run this project, please follow the following steps
-1. Clone the repository into a directory of your choice with the command git clone https://github.com/anuraagm/personal-website.git
+1. Clone the repository into a directory of your choice with the command 'git clone https://github.com/anuraagm/personal-website.git'
 2. Install the latest versions of python3 and pip3 from [here](https://www.python.org/downloads/)
 3. Install the latest versions of Node.js and npm from [here](https://nodejs.org/en/download/)
 
