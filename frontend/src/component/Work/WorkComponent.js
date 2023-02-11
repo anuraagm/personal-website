@@ -57,9 +57,9 @@ function WorkComponent ({workRef, projectRef, place}) {
                 {work !== null ? (
                         work.map(element => 
                             <div className='mb-6'>
-                                <a href={element.company_link} class="block p-6 border border-gray-200 rounded-sm shadow hover:bg-zinc-100 dark:bg-zinc-800 dark:border-zinc-700 dark:hover:bg-zinc-700">
+                                <a href={element.company_link} class="block p-6 border border-gray-200 rounded-sm shadow bg-zinc-800 border-zinc-700 hover:bg-zinc-700">
                                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-100">{element.company_name}</h5>
-                                    <p class="font-normal text-gray-700 dark:text-gray-400">{element.role_details}</p>
+                                    <p class="font-normal text-gray-400">{element.role_details}</p>
                                 </a>
                             </div> 
                         )
@@ -74,9 +74,9 @@ function WorkComponent ({workRef, projectRef, place}) {
                     {project !== null ? (
                             project.map(element => 
                                 <div className='mb-6' id={element.id} onClick={() => manageModal(element)}>
-                                    <div class="block p-6 border border-zinc-200 rounded-sm shadow hover:bg-zinc-100 dark:bg-zinc-800 dark:border-zinc-700 dark:hover:bg-zinc-700" id="toggle-card">
+                                    <div class="block p-6 border border-zinc-200 rounded-sm shadow bg-zinc-800 border-zinc-700 hover:bg-zinc-700" id="toggle-card">
                                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-100">{element.project_name}</h5>
-                                        <p class="font-normal text-gray-700 dark:text-gray-400">{element.project_description}</p>
+                                        <p class="font-normal text-gray-400">{element.project_description}</p>
                                     </div>
                                 </div>
                             )
