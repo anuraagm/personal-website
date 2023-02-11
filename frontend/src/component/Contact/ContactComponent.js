@@ -17,7 +17,7 @@ const ContactComponent = () => {
   };
 
   return (
-    <div className="ContactComponent dark:bg-zinc-800 p-6 rounded-lg shadow-md">
+    <div className="ContactComponent bg-zinc-800 p-6 rounded-lg shadow-md">
       <h5 className="text-2xl font-bold text-gray-300 mb-6 md:w-2/3">Drop in a message and I'll get in touch with you as soon as possible.</h5>
       <div className="mb-12">
         <label
