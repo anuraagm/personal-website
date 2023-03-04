@@ -1,5 +1,5 @@
 # Personal Website - Anuraag Muktevi
-I have created this repository for the development of my personal website.
+I have created this repository for the development of my personal website. Do visit my website [here](https://www.anuraagmuktevi.com).
 
 ## To run this project, please follow the following steps
 1. Clone the repository into a directory of your choice with the command 'git clone https://github.com/anuraagm/personal-website.git'
