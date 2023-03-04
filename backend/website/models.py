@@ -5,6 +5,7 @@ class Post(models.Model):
     title = models.CharField(max_length=255)
     content = models.TextField()
     preview = models.TextField(blank=True, null=True)
+    featured_image = models.ImageField(upload_to='', blank=True, null=True)
 
     def __str__(self):
         return self.title

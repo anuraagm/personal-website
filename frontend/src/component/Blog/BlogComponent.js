@@ -36,10 +36,10 @@ function BlogComponent() {
                     <h1 className="text-2xl font-bold text-gray-100 mb-6">Blog</h1>
                     <div className="flex flex-wrap">
                         {blogs.map((element, index) => 
-                            <div key={index} className='p-2 w-1/3'>
+                            <div key={index} className='p-2 md:w-1/3'>
                                 <div class="bg-zinc-800 border-zinc-700 hover:bg-zinc-700 rounded-lg mb-5">
                                     <a href="#">
-                                        <img class="rounded-t-lg" src="https://flowbite.com/docs/images/blog/image-1.jpg" alt=""/>
+                                        <img class="rounded-t-lg" src={element.featured_image} alt=""/>
                                     </a>
                                     <div class="p-5">
                                         <a href="#">
