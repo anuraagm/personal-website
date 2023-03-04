@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import BlogComponent from './component/Blog/BlogComponent';
 import NoPageComponent from './component/NoPage/NoPageComponent';
 import ProjectComponent from './component/Project/ProjectComponent';
+import PostComponent from './component/Post/PostComponent';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route index element={<HomeComponent></HomeComponent>} />
             <Route path="blogs" element={<BlogComponent></BlogComponent>} />
             <Route path="projects/:id" element={<ProjectComponent></ProjectComponent>} />
+            <Route path="post/:id" element={<PostComponent></PostComponent>}/>
             <Route path="*" element={<NoPageComponent></NoPageComponent>} />
           </Route>
         </Routes>
