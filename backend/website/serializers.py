@@ -4,7 +4,7 @@ from .models import Post, Page, Project, Technology, Work
 class PostSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
-        fields = ('id', 'title', 'content')
+        fields = ('id', 'title', 'content', 'preview', 'featured_image')
 
 class PageSerializer(serializers.ModelSerializer):
     class Meta:
