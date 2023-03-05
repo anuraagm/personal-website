@@ -30,10 +30,13 @@ function BlogComponent() {
 
     return (
         <div className="BlogComponent m-6">
+            <h1 className="text-2xl font-bold text-gray-100">Blog</h1>
+            <div className="hidden lg:block">
+                <LinkComponent></LinkComponent>
+            </div>
             {
                 blogs ?
                 <div>
-                    <h1 className="text-2xl font-bold text-gray-100 mb-6">Blog</h1>
                     <div className="flex flex-wrap">
                         {blogs.map((element, index) => 
                             <div key={index} className='p-2 md:w-1/3'>
@@ -60,9 +63,6 @@ function BlogComponent() {
                 :
                 <h1 className="text-2xl font-bold text-gray-100 mb-6">Blog - Coming Soon!</h1>
             }
-            <div className="hidden lg:block">
-                <LinkComponent></LinkComponent>
-            </div>
             <div className="hidden lg:block mt-8 bottom-0 lg:w-1/4">
                 <FooterComponent></FooterComponent>
             </div>
