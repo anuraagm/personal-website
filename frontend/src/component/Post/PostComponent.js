@@ -26,11 +26,11 @@ function PostComponent() {
         <div className="PostComponent m-6">
             {
                 <div className="PostArea">
-                    <h1 className="text-2xl font-bold text-gray-100 mb-6">{post?.title}</h1>
+                    <h1 className="text-2xl font-bold text-gray-100">{post?.title}</h1>
                     <div className="hidden lg:block mb-0">
                         <LinkComponent></LinkComponent>
                     </div>
-                    <p className="font-bold text-gray-300 mb-6">{HtmlReactParser(DOMPurify.sanitize(post?.content))}</p>
+                    <p className="text-gray-200 mb-6">{HtmlReactParser(DOMPurify.sanitize(post?.content))}</p>
                 </div>
             }
             <div className="hidden lg:block mt-8 bottom-0 lg:w-1/4">

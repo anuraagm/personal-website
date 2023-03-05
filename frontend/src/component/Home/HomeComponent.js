@@ -28,7 +28,7 @@ function HomeComponent () {
                     <div className="hidden lg:block mt-12">
                         <FooterComponent></FooterComponent>
                     </div>
-                    <div className="block md:hidden mt-6">
+                    <div className="block lg:hidden mt-6">
                         <a href="#" onClick={handleClick}>
                             <div className="flex items-center">
                                 <img className="mt-2 mr-1" src={link} style={{width:"3%"}}/>
